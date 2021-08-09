@@ -1,0 +1,68 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Summary
+    chapters:
+      - file: overview/overview
+      - file: changes/field-completeness-departmental
+      - file: changes/change-same-monthly-field-completeness-departmental
+      - file: changes/change-monthly-field-completeness-departmental
+      - file: changes/change-field-retrievabilty-same
+      - file: changes/change-field-retrievabilty
+        #    chapters:
+        #      - file: changes/field-completeness-decades
+        #    chapters:
+        #      - file: changes/field-retrievabilty
+    #- file: overview/month-performance
+    #- file: overview/quarter-performance
+    #- file: overview/annual-performance
+  - caption: Latest
+    chapters:
+      - file: latest/field-completeness-departmental
+      - file: latest/field-completeness-decades
+      - file: latest/field-retrievabilty
+    # - file: latest/month-performance-completness
+    # - file: latest/month-performance-errors
+    #  - caption: Metadata Quality (Change)
+    # - file: review/quarter-performance
+    # - file: review/annual-performance
+  - caption: Quantifiable Problem Reports 
+    chapters:
+    - file: problem/problem-singular-plural
+      title: "Singular/Plural Object Types"
+    - file: problem/problem-upper-lower
+      title: "Upper/Lower Object Types"
+  - caption: Unquantifiable Problem Reports 
+    chapters:
+    - file: problem/problem-long-short-objecttype
+      title: "Long/Short ObjectTypes"
+    - file: problem/problem-high-cardinality
+      title: "High Cardinality"
+      # - file: problem/problem-upper-lower-type
+      # - file: problem/problem-high-cardinality-type
+      #  - file: problem/problem-singular-plural-type
+  
+# TODO - Archive
+#
+# Hidden doc/script that generates HD5 data from CSV files in
+# current month
+# Introduction
+#
+# Latest Overview (review since start of year)
+
+# Summary stats on Filtering/Browsing/etc and review for year
+
+# This month Sitatuion
+#   Completness
+#   Existanance
+#   Errors
+#
+
+# latest review 
+#
+# Quartely reviews
+
+
