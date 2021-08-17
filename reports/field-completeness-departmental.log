@@ -1,0 +1,75 @@
+Traceback (most recent call last):
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/client.py", line 540, in async_execute
+    await self.async_execute_cell(
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Save all the possible collectioncode
+import altair as alt
+
+ranges = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
+count =0
+
+dept_col_counts = None
+cur_depts = complete_df[' collectionCode'].unique()
+for dept_code in depts:
+  vcharts = []
+  hcharts = []
+  charts = []
+  print(dept_code)
+  dept_stats_df = complete_df.loc[complete_df[' collectionCode'] == dept_code]
+  # Now need to loop over each completeness coll in turn
+  for column in dept_stats_df.columns[1:]:
+    # Group into counts of percentages 0-10, 10-20, ... 90-100
+    # dept_col_counts = dept_stats_df[column].value_counts(bins=10, sort=False)
+    
+    dept_col_counts = dept_stats_df[column].groupby(pd.cut(dept_stats_df[column], ranges, labels=["0%","10%","20%","30%","40%","50%","60%","70%","80%","90%"], include_lowest=True)).count()
+    dept_col_df = pd.DataFrame(dept_col_counts)
+    dept_col_df.columns = ['completeness']
+    dept_col_df.rename_axis("percent")
+    chart = alt.Chart(dept_col_df.reset_index()).mark_bar().encode(
+      x=alt.X(column),
+      y=alt.Y('completeness', scale=alt.Scale(domain=(0, 1000000)), axis=alt.Axis(title='Objects')))
+    chart_text = chart.mark_text().encode(
+        text='completeness:Q')
+    charts.append((chart + chart_text))
+    if count > 3:
+      hcharts.append(alt.hconcat(*charts))
+      charts = []
+      count = 0
+    else:
+      count += 1
+  break
+#dept_col_df = pd.DataFrame(dept_col_counts)
+#dept_col_df.columns = ['completeness']
+#dept_col_df.rename_axis("percent")
+#dept_col_df.reset_index().rename(columns={0:'counts'})
+#dept_col_df
+alt.vconcat(*hcharts)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-3-05a5bbd8912d>[0m in [0;36m<module>[0;34m[0m
+[1;32m      7[0m [0mdept_col_counts[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m [0mcur_depts[0m [0;34m=[0m [0mcomplete_df[0m[0;34m[[0m[0;34m' collectionCode'[0m[0;34m][0m[0;34m.[0m[0munique[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 9[0;31m [0;32mfor[0m [0mdept_code[0m [0;32min[0m [0mdepts[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     10[0m   [0mvcharts[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     11[0m   [0mhcharts[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'depts' is not defined
+NameError: name 'depts' is not defined
+

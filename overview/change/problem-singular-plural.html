@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change in Singular/Plural Object Types &#8212; My sample book</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Metadata Quality (Summary)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../changes/change-monthly-field-completeness-departmental.html">
+   Field Completeness Departmental (Monthly Change - with new)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Metadata Quality (Latest)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../latest/field-retrievabilty.html">
+   Retrieval Departmental
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Quantifiable Problem Reports (Latest)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../problem/problem-singular-plural.html">
+   Singular/Plural Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../problem/problem-upper-lower.html">
+   Upper/Lower Object Types
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Unquantifiable Problem Reports (Latest)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../problem/problem-long-short-objecttype.html">
+   Long/Short Named Unique Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../problem/problem-high-cardinality.html">
+   High Cardinality
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/overview/change/problem-singular-plural.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Foverview/change/problem-singular-plural.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/overview/change/problem-singular-plural.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="change-in-singular-plural-object-types">
+<h1>Change in Singular/Plural Object Types<a class="headerlink" href="#change-in-singular-plural-object-types" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">cur_objects_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;/home/richard/Git/bbk-mqaf/data/latest/field.h5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prev_objects_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">&#39;/home/richard/Git/bbk-mqaf/data/prev/field.h5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cur_obj_types</span> <span class="o">=</span> <span class="n">cur_objects_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">cur_total_objects</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur_objects_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prev_obj_types</span> <span class="o">=</span> <span class="n">prev_objects_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">prev_total_objects</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">prev_objects_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now extract all those ending with &#39;s&#39; - not comprehensive plural detection system of course</span>
+
+<span class="n">cur_plural_types</span> <span class="o">=</span> <span class="n">cur_obj_types</span><span class="p">[</span><span class="n">cur_obj_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)]</span>
+
+<span class="c1"># Remove those ending with &#39;ss&#39; or &#39;es&#39; to get rid of some obvious false positives</span>
+
+<span class="n">cur_plural_types</span> <span class="o">=</span> <span class="n">cur_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">cur_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;es&quot;</span><span class="p">)]</span>
+<span class="n">cur_plural_types</span> <span class="o">=</span> <span class="n">cur_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">cur_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;ss&quot;</span><span class="p">)]</span>
+<span class="n">cur_plural_types</span> <span class="o">=</span> <span class="n">cur_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">cur_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;us&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now extract all those ending with &#39;s&#39; - not comprehensive plural detection system of course</span>
+
+<span class="n">prev_plural_types</span> <span class="o">=</span> <span class="n">prev_obj_types</span><span class="p">[</span><span class="n">prev_obj_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)]</span>
+
+<span class="c1"># Remove those ending with &#39;ss&#39; or &#39;es&#39; to get rid of some obvious false positives</span>
+
+<span class="n">prev_plural_types</span> <span class="o">=</span> <span class="n">prev_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">prev_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;es&quot;</span><span class="p">)]</span>
+<span class="n">prev_plural_types</span> <span class="o">=</span> <span class="n">prev_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">prev_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;ss&quot;</span><span class="p">)]</span>
+<span class="n">prev_plural_types</span> <span class="o">=</span> <span class="n">prev_plural_types</span><span class="p">[</span><span class="o">~</span><span class="n">prev_plural_types</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;us&quot;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now go through each, remove the &#39;s&#39;, and check if it also exists in original list (upper case first letter for the comparision) </span>
+
+<span class="n">total_cur_plural</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">cur_plural_types</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">singular</span> <span class="o">=</span> <span class="n">index</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">singular</span> <span class="ow">in</span> <span class="n">cur_obj_types</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">cur_obj_types</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">singular</span><span class="p">)</span>
+        <span class="n">total_cur_plural</span> <span class="o">+=</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now go through each, remove the &#39;s&#39;, and check if it also exists in original list (upper case first letter for the comparision) </span>
+
+<span class="n">total_prev_plural</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">prev_plural_types</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">singular</span> <span class="o">=</span> <span class="n">index</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">singular</span> <span class="ow">in</span> <span class="n">prev_obj_types</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">prev_obj_types</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">singular</span><span class="p">)</span>
+        <span class="n">total_prev_plural</span> <span class="o">+=</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cur_percent</span> <span class="o">=</span> <span class="n">total_cur_plural</span><span class="o">/</span><span class="n">cur_total_objects</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total current Objects </span><span class="si">{</span><span class="n">cur_total_objects</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="n">total_cur_plural</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="p">(</span><span class="n">cur_percent</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%) are possible plural duplicates&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total current Objects 1238467 of which 15731 (1.2702%) are possible plural duplicates
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prev_percent</span> <span class="o">=</span> <span class="n">total_prev_plural</span><span class="o">/</span><span class="n">prev_total_objects</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total previous Objects </span><span class="si">{</span><span class="n">prev_total_objects</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="n">total_prev_plural</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="p">(</span><span class="n">prev_percent</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%) are possible plural duplicates&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total previous Objects 1239903 of which 15734 (1.2690%) are possible plural duplicates
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">((</span><span class="n">cur_percent</span><span class="o">-</span><span class="n">prev_percent</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+  <span class="n">plural_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">total_prev_plural</span><span class="o">-</span><span class="n">total_cur_plural</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_prev_plural</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Monthly Change is </span><span class="si">{</span><span class="n">total_cur_plural</span><span class="o">-</span><span class="n">total_prev_plural</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="p">(</span><span class="n">plural_change</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">%) fewer plural object types which improves browsing functionality&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">plural_change</span> <span class="o">=</span> <span class="p">(</span><span class="n">total_prev_plural</span><span class="o">-</span><span class="n">total_cur_plural</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_prev_plural</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Monthly Change is </span><span class="si">{</span><span class="n">total_cur_plural</span><span class="o">-</span><span class="n">total_prev_plural</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="p">(</span><span class="n">plural_change</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">% more plurals which reduces browsing functionality&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Monthly Change is -3 (0.0191%) fewer plural object types which improves browsing functionality
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">myst_nb</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: myst_nb in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (0.12.3)
+Requirement already satisfied: jupyter-sphinx~=0.3.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (0.3.2)
+Requirement already satisfied: nbconvert~=5.6 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (5.6.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ipywidgets&lt;8,&gt;=7.0.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (7.6.3)
+Requirement already satisfied: docutils&gt;=0.15 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (0.16)
+Requirement already satisfied: myst-parser~=0.13.5 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (0.13.7)
+Requirement already satisfied: pyyaml in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (5.3.1)
+Requirement already satisfied: sphinx-togglebutton~=0.2.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (0.2.3)
+Requirement already satisfied: sphinx&lt;4,&gt;=2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (3.3.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbformat~=5.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (5.0.8)
+Requirement already satisfied: ipython in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (7.19.0)
+Requirement already satisfied: jupyter-cache~=0.4.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (0.4.2)
+Requirement already satisfied: importlib-metadata in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst_nb) (2.0.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (0.8.4)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (0.3)
+Requirement already satisfied: testpath in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (0.4.4)
+Requirement already satisfied: jinja2&gt;=2.4 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (2.11.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: bleach in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (3.2.1)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (1.4.3)
+Requirement already satisfied: traitlets&gt;=4.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (5.0.5)
+Requirement already satisfied: jupyter-core in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (4.7.0)
+Requirement already satisfied: defusedxml in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (0.6.0)
+Requirement already satisfied: pygments in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbconvert~=5.6-&gt;myst_nb) (2.7.2)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0; python_version &gt;= &quot;3.6&quot; in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (1.0.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (3.5.1)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (5.3.4)
+Requirement already satisfied: mdit-py-plugins~=0.2.5 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst-parser~=0.13.5-&gt;myst_nb) (0.2.6)
+Requirement already satisfied: markdown-it-py~=0.6.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from myst-parser~=0.13.5-&gt;myst_nb) (0.6.2)
+Requirement already satisfied: wheel in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx-togglebutton~=0.2.2-&gt;myst_nb) (0.36.2)
+Requirement already satisfied: setuptools in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx-togglebutton~=0.2.2-&gt;myst_nb) (44.0.0)
+Requirement already satisfied: sphinxcontrib-applehelp in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.0.2)
+Requirement already satisfied: sphinxcontrib-serializinghtml in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.1.4)
+Requirement already satisfied: imagesize in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.2.0)
+Requirement already satisfied: sphinxcontrib-devhelp in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.0.2)
+Requirement already satisfied: sphinxcontrib-qthelp in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.0.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: babel&gt;=1.3 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (2.9.0)
+Requirement already satisfied: packaging in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (20.3)
+Requirement already satisfied: snowballstemmer&gt;=1.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (2.0.0)
+Requirement already satisfied: requests&gt;=2.5.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (2.25.0)
+Requirement already satisfied: alabaster&lt;0.8,&gt;=0.7 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (0.7.12)
+Requirement already satisfied: sphinxcontrib-htmlhelp in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.0.3)
+Requirement already satisfied: sphinxcontrib-jsmath in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.0.1)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbformat~=5.0-&gt;myst_nb) (3.2.0)
+Requirement already satisfied: ipython-genutils in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbformat~=5.0-&gt;myst_nb) (0.2.0)
+Requirement already satisfied: jedi&gt;=0.10 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (0.17.2)
+Requirement already satisfied: pickleshare in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (0.7.5)
+Requirement already satisfied: backcall in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (0.2.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (3.0.8)
+Requirement already satisfied: decorator in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (4.4.2)
+Requirement already satisfied: pexpect&gt;4.3; sys_platform != &quot;win32&quot; in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipython-&gt;myst_nb) (4.8.0)
+Requirement already satisfied: nbclient&lt;0.6,&gt;=0.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jupyter-cache~=0.4.1-&gt;myst_nb) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sqlalchemy~=1.3.12 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jupyter-cache~=0.4.1-&gt;myst_nb) (1.3.20)
+Requirement already satisfied: attrs in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jupyter-cache~=0.4.1-&gt;myst_nb) (20.3.0)
+Requirement already satisfied: nbdime in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jupyter-cache~=0.4.1-&gt;myst_nb) (2.1.0)
+Requirement already satisfied: zipp&gt;=0.5 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from importlib-metadata-&gt;myst_nb) (3.4.0)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jinja2&gt;=2.4-&gt;nbconvert~=5.6-&gt;myst_nb) (1.1.1)
+Requirement already satisfied: webencodings in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from bleach-&gt;nbconvert~=5.6-&gt;myst_nb) (0.5.1)
+Requirement already satisfied: six&gt;=1.9.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from bleach-&gt;nbconvert~=5.6-&gt;myst_nb) (1.15.0)
+Requirement already satisfied: notebook&gt;=4.4.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (6.1.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tornado&gt;=4.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (6.1)
+Requirement already satisfied: jupyter-client in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (6.1.7)
+Requirement already satisfied: pytz&gt;=2015.7 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from babel&gt;=1.3-&gt;sphinx&lt;4,&gt;=2-&gt;myst_nb) (2020.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from requests&gt;=2.5.0-&gt;sphinx&lt;4,&gt;=2-&gt;myst_nb) (2019.11.28)
+Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from requests&gt;=2.5.0-&gt;sphinx&lt;4,&gt;=2-&gt;myst_nb) (3.0.4)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from requests&gt;=2.5.0-&gt;sphinx&lt;4,&gt;=2-&gt;myst_nb) (1.25.8)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from requests&gt;=2.5.0-&gt;sphinx&lt;4,&gt;=2-&gt;myst_nb) (2.8)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat~=5.0-&gt;myst_nb) (0.17.3)
+Requirement already satisfied: parso&lt;0.8.0,&gt;=0.7.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jedi&gt;=0.10-&gt;ipython-&gt;myst_nb) (0.7.1)
+Requirement already satisfied: wcwidth in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython-&gt;myst_nb) (0.2.5)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from pexpect&gt;4.3; sys_platform != &quot;win32&quot;-&gt;ipython-&gt;myst_nb) (0.6.0)
+Requirement already satisfied: async-generator in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbclient&lt;0.6,&gt;=0.2-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (1.10)
+Requirement already satisfied: nest-asyncio in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbclient&lt;0.6,&gt;=0.2-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (1.4.3)
+Requirement already satisfied: colorama in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbdime-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (0.4.3)
+Requirement already satisfied: GitPython!=2.1.4,!=2.1.5,!=2.1.6 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from nbdime-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (3.1.11)
+Requirement already satisfied: argon2-cffi in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (20.1.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (0.9.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Send2Trash in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (1.5.0)
+Requirement already satisfied: prometheus-client in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (0.9.0)
+Requirement already satisfied: pyzmq&gt;=17 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (20.0.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (2.8.1)
+Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from GitPython!=2.1.4,!=2.1.5,!=2.1.6-&gt;nbdime-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (4.0.5)
+Requirement already satisfied: cffi&gt;=1.0.0 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (1.14.3)
+Requirement already satisfied: smmap&lt;4,&gt;=3.0.1 in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;GitPython!=2.1.4,!=2.1.5,!=2.1.6-&gt;nbdime-&gt;jupyter-cache~=0.4.1-&gt;myst_nb) (3.0.4)
+Requirement already satisfied: pycparser in /home/richard/.virtualenvs/etcdocs/lib/python3.8/site-packages (from cffi&gt;=1.0.0-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.0.0-&gt;myst_nb) (2.20)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;plural_change&quot;</span><span class="p">,</span> <span class="n">plural_change</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00019066988686920045
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./overview/change"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entity Absence Detection &#8212; My sample book</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Entity Absence Detection (Techniques)" href="rule-missingentities-techniques.html" />
+    <link rel="prev" title="Upper/Lower Object Type" href="../problem/problem-upper-lower.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   V&amp;A Metadata Quality Report
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/overview.html">
+   Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Change (Monthly)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-same-monthly-field-completeness-departmental.html">
+   Completeness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-monthly-field-completeness-departmental.html">
+   Completeness (incl. new/del)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-field-retrievabilty-same.html">
+   Retrieval
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-field-retrievabilty.html">
+   Retrieval (incl. new/del)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Latest
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-completeness-departmental.html">
+   Completeness (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-completeness-decades.html">
+   Completeness (Decades)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-retrievabilty-departmental.html">
+   Retrievability (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="field-retrievabilty-decades.html">
+   Retrievability (Decades)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Quantifiable)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-singular-plural.html">
+   Singular/Plural Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-upper-lower.html">
+   Upper/Lower Object Types
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Missing Entities - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rule-missingentities-techniques.html">
+   Missing Entities - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rule-factcheck-material.html">
+   Factcheck - Materials
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Unquantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-long-short-objecttype.html">
+   Long/Short Unique Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-high-cardinality.html">
+   High Cardinality
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/latest/rule-missingentities-material.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flatest/rule-missingentities-material.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/latest/rule-missingentities-material.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sample-objects">
+   Sample Objects
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="entity-absence-detection">
+<h1>Entity Absence Detection<a class="headerlink" href="#entity-absence-detection" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span><span class="mi">0</span>
+
+<span class="n">dept_col_counts</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">depts</span> <span class="o">=</span> <span class="n">missing_entities_df</span><span class="p">[</span><span class="s1">&#39; collectionCode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">charts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hcharts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">dept_code</span> <span class="ow">in</span> <span class="n">depts</span><span class="p">:</span>
+  <span class="n">dept_stats_df</span> <span class="o">=</span> <span class="n">missing_entities_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">missing_entities_df</span><span class="p">[</span><span class="s1">&#39; collectionCode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">dept_code</span><span class="p">]</span>
+  <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dept_stats_df</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># Ignore EXH and other errartic departments</span>
+    <span class="k">continue</span>
+  <span class="c1"># Now need to loop over each completeness coll in turn</span>
+
+  <span class="n">dept_col_counts</span> <span class="o">=</span> <span class="n">dept_stats_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39; ruleCatalog:score]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+  <span class="n">dept_col_counts</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">deptNames</span><span class="p">[</span><span class="n">dept_code</span><span class="p">]</span>
+  <span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dept_col_counts</span><span class="p">)</span> <span class="c1">#, ignore_index=True)</span>
+    
+<span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Department&#39;</span><span class="p">)</span><span class="c1"># .rename_axis(&#39;Missing&#39;, axis=&#39;columns&#39;)</span>
+    <span class="c1"># TO handle converting from CategoricalIndex - may change https://github.com/pandas-dev/pandas/issues/19136</span>
+<span class="c1">#  dept_rows_df.columns = dept_rows_df.columns.tolist()</span>
+ <span class="c1">#   print(dept_rows_df)</span>
+<span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">dept_rows_melt_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Department&#39;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Absent&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">dept_rows_melt_df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+<span class="c1">#dept_rows_melt_df</span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">dept_rows_melt_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+       <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Count:Q&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Object Records&#39;</span><span class="p">)),</span>
+       <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Department:O&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Absent:Q&#39;</span><span class="p">,</span>
+       <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Absent&#39;</span><span class="p">,</span> <span class="s1">&#39;Count&#39;</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Potential Missing Entities (Materials)&quot;</span><span class="p">)</span>
+<span class="c1">#dept_rows_df</span>
+<span class="n">chart</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-16be0b0147384df9b2d1326aff8b0fe5"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-16be0b0147384df9b2d1326aff8b0fe5") {
+      outputDiv = document.getElementById("altair-viz-16be0b0147384df9b2d1326aff8b0fe5");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-6580eda6b03591725263b7282d54d1af"}, "mark": "bar", "encoding": {"color": {"type": "quantitative", "field": "Absent"}, "tooltip": [{"type": "quantitative", "field": "Absent"}, {"type": "quantitative", "field": "Count"}], "x": {"type": "quantitative", "axis": {"title": "Object Records"}, "field": "Count"}, "y": {"type": "ordinal", "field": "Department"}}, "title": "Potential Missing Entities (Materials)", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-6580eda6b03591725263b7282d54d1af": [{"Department": "Museum of Childhood", "Absent": 1, "Count": 545.0}, {"Department": "Theatre and Performance Collection", "Absent": 1, "Count": 641.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 1, "Count": 437.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 1, "Count": 2317.0}, {"Department": "Ceramics Collection", "Absent": 1, "Count": 1064.0}, {"Department": "East Asia Collection", "Absent": 1, "Count": 785.0}, {"Department": "Textiles and Fashion Collection", "Absent": 1, "Count": 1903.0}, {"Department": "Metalwork Collection", "Absent": 1, "Count": 897.0}, {"Department": "South & South East Asia Collection", "Absent": 1, "Count": 879.0}, {"Department": "Middle East Section", "Absent": 1, "Count": 336.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 1, "Count": 29.0}, {"Department": "National Art Library", "Absent": 1, "Count": 85.0}, {"Department": "Sculpture Collection", "Absent": 1, "Count": 143.0}, {"Department": "Wedgwood Collection", "Absent": 1, "Count": 81.0}, {"Department": "Department of Photography", "Absent": 1, "Count": 21.0}, {"Department": "Museum of Childhood", "Absent": 2, "Count": 115.0}, {"Department": "Theatre and Performance Collection", "Absent": 2, "Count": 76.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 2, "Count": 68.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 2, "Count": 230.0}, {"Department": "Ceramics Collection", "Absent": 2, "Count": 69.0}, {"Department": "East Asia Collection", "Absent": 2, "Count": 125.0}, {"Department": "Textiles and Fashion Collection", "Absent": 2, "Count": 276.0}, {"Department": "Metalwork Collection", "Absent": 2, "Count": 153.0}, {"Department": "South & South East Asia Collection", "Absent": 2, "Count": 200.0}, {"Department": "Middle East Section", "Absent": 2, "Count": 48.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 2, "Count": 7.0}, {"Department": "National Art Library", "Absent": 2, "Count": 17.0}, {"Department": "Sculpture Collection", "Absent": 2, "Count": 12.0}, {"Department": "Wedgwood Collection", "Absent": 2, "Count": 1.0}, {"Department": "Department of Photography", "Absent": 2, "Count": 6.0}, {"Department": "Museum of Childhood", "Absent": 3, "Count": 7.0}, {"Department": "Theatre and Performance Collection", "Absent": 3, "Count": 17.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 3, "Count": 19.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 3, "Count": 22.0}, {"Department": "Ceramics Collection", "Absent": 3, "Count": 5.0}, {"Department": "East Asia Collection", "Absent": 3, "Count": 28.0}, {"Department": "Textiles and Fashion Collection", "Absent": 3, "Count": 16.0}, {"Department": "Metalwork Collection", "Absent": 3, "Count": 9.0}, {"Department": "South & South East Asia Collection", "Absent": 3, "Count": 34.0}, {"Department": "Middle East Section", "Absent": 3, "Count": 7.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 3, "Count": 1.0}, {"Department": "National Art Library", "Absent": 3, "Count": 3.0}, {"Department": "Sculpture Collection", "Absent": 3, "Count": 7.0}, {"Department": "Wedgwood Collection", "Absent": 3, "Count": 0.0}, {"Department": "Department of Photography", "Absent": 3, "Count": 0.0}, {"Department": "Museum of Childhood", "Absent": 4, "Count": 2.0}, {"Department": "Theatre and Performance Collection", "Absent": 4, "Count": 6.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 4, "Count": 4.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 4, "Count": 0.0}, {"Department": "Ceramics Collection", "Absent": 4, "Count": 2.0}, {"Department": "East Asia Collection", "Absent": 4, "Count": 6.0}, {"Department": "Textiles and Fashion Collection", "Absent": 4, "Count": 2.0}, {"Department": "Metalwork Collection", "Absent": 4, "Count": 2.0}, {"Department": "South & South East Asia Collection", "Absent": 4, "Count": 2.0}, {"Department": "Middle East Section", "Absent": 4, "Count": 3.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 4, "Count": 0.0}, {"Department": "National Art Library", "Absent": 4, "Count": 0.0}, {"Department": "Sculpture Collection", "Absent": 4, "Count": 13.0}, {"Department": "Wedgwood Collection", "Absent": 4, "Count": 0.0}, {"Department": "Department of Photography", "Absent": 4, "Count": 0.0}, {"Department": "Museum of Childhood", "Absent": 5, "Count": 1.0}, {"Department": "Theatre and Performance Collection", "Absent": 5, "Count": 0.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 5, "Count": 0.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 5, "Count": 0.0}, {"Department": "Ceramics Collection", "Absent": 5, "Count": 0.0}, {"Department": "East Asia Collection", "Absent": 5, "Count": 3.0}, {"Department": "Textiles and Fashion Collection", "Absent": 5, "Count": 0.0}, {"Department": "Metalwork Collection", "Absent": 5, "Count": 1.0}, {"Department": "South & South East Asia Collection", "Absent": 5, "Count": 0.0}, {"Department": "Middle East Section", "Absent": 5, "Count": 0.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 5, "Count": 0.0}, {"Department": "National Art Library", "Absent": 5, "Count": 0.0}, {"Department": "Sculpture Collection", "Absent": 5, "Count": 3.0}, {"Department": "Wedgwood Collection", "Absent": 5, "Count": 0.0}, {"Department": "Department of Photography", "Absent": 5, "Count": 0.0}, {"Department": "Museum of Childhood", "Absent": 6, "Count": 0.0}, {"Department": "Theatre and Performance Collection", "Absent": 6, "Count": 0.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 6, "Count": 0.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 6, "Count": 0.0}, {"Department": "Ceramics Collection", "Absent": 6, "Count": 0.0}, {"Department": "East Asia Collection", "Absent": 6, "Count": 2.0}, {"Department": "Textiles and Fashion Collection", "Absent": 6, "Count": 0.0}, {"Department": "Metalwork Collection", "Absent": 6, "Count": 0.0}, {"Department": "South & South East Asia Collection", "Absent": 6, "Count": 0.0}, {"Department": "Middle East Section", "Absent": 6, "Count": 0.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 6, "Count": 0.0}, {"Department": "National Art Library", "Absent": 6, "Count": 0.0}, {"Department": "Sculpture Collection", "Absent": 6, "Count": 0.0}, {"Department": "Wedgwood Collection", "Absent": 6, "Count": 0.0}, {"Department": "Department of Photography", "Absent": 6, "Count": 0.0}, {"Department": "Museum of Childhood", "Absent": 7, "Count": 0.0}, {"Department": "Theatre and Performance Collection", "Absent": 7, "Count": 0.0}, {"Department": "Furniture and Woodwork Collection", "Absent": 7, "Count": 0.0}, {"Department": "Prints, Drawings & Paintings Collection", "Absent": 7, "Count": 0.0}, {"Department": "Ceramics Collection", "Absent": 7, "Count": 0.0}, {"Department": "East Asia Collection", "Absent": 7, "Count": 1.0}, {"Department": "Textiles and Fashion Collection", "Absent": 7, "Count": 0.0}, {"Department": "Metalwork Collection", "Absent": 7, "Count": 0.0}, {"Department": "South & South East Asia Collection", "Absent": 7, "Count": 0.0}, {"Department": "Middle East Section", "Absent": 7, "Count": 0.0}, {"Department": "Design, Architecture and Digital Department", "Absent": 7, "Count": 0.0}, {"Department": "National Art Library", "Absent": 7, "Count": 0.0}, {"Department": "Sculpture Collection", "Absent": 7, "Count": 0.0}, {"Department": "Wedgwood Collection", "Absent": 7, "Count": 0.0}, {"Department": "Department of Photography", "Absent": 7, "Count": 0.0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<div class="section" id="sample-objects">
+<h2>Sample Objects<a class="headerlink" href="#sample-objects" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_df</span> <span class="o">=</span> <span class="n">missing_entities_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">sample_df</span><span class="p">[</span><span class="s1">&#39;[systemNumber&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13863    O1115750
+3219      O501193
+2512       O38226
+8522      O201011
+3160      O232553
+10232     O720787
+2259       O85709
+1192      O452457
+286        O24619
+7753      O261269
+4735       O71184
+578       O154725
+5383      O140636
+4385      O364745
+7959       O38171
+3583      O234915
+745      O1243962
+3319       O23427
+4645     O1139180
+2505      O140673
+Name: [systemNumber, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./latest"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../problem/problem-upper-lower.html" title="previous page">Upper/Lower Object Type</a>
+    <a class='right-next' id="next-link" href="rule-missingentities-techniques.html" title="next page">Entity Absence Detection (Techniques)</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
