@@ -7,43 +7,39 @@ parts:
   - caption: Summary
     chapters:
       - file: overview/overview
+  - caption: Change (Monthly)
+    chapters:
       - file: changes/field-completeness-departmental
       - file: changes/change-same-monthly-field-completeness-departmental
       - file: changes/change-monthly-field-completeness-departmental
       - file: changes/change-field-retrievabilty-same
       - file: changes/change-field-retrievabilty
-        #    chapters:
-        #      - file: changes/field-completeness-decades
-        #    chapters:
-        #      - file: changes/field-retrievabilty
-    #- file: overview/month-performance
-    #- file: overview/quarter-performance
-    #- file: overview/annual-performance
-  - caption: Latest
+  - caption: Latest 
     chapters:
       - file: latest/field-completeness-departmental
       - file: latest/field-completeness-decades
-      - file: latest/field-retrievabilty
-    # - file: latest/month-performance-completness
-    # - file: latest/month-performance-errors
-    #  - caption: Metadata Quality (Change)
-    # - file: review/quarter-performance
-    # - file: review/annual-performance
-  - caption: Quantifiable Problem Reports 
+      - file: latest/field-retrievabilty-departmental
+      - file: latest/field-retrievabilty-decades
+  - caption: Problems (Quantifiable) 
     chapters:
     - file: problem/problem-singular-plural
       title: "Singular/Plural Object Types"
     - file: problem/problem-upper-lower
       title: "Upper/Lower Object Types"
-  - caption: Unquantifiable Problem Reports 
+    - file: latest/rule-missingentities-material
+      title: "Missing Entities - Materials"
+    - file: latest/rule-missingentities-techniques
+      title: "Missing Entities - Techniques"
+    - file: latest/rule-factcheck-material
+      title: "Factcheck - Materials"
+    - file: latest/rule-factcheck-techniques
+      title: "Factcheck - Techniques"
+  - caption: Problems (Unquantifiable) 
     chapters:
     - file: problem/problem-long-short-objecttype
       title: "Long/Short ObjectTypes"
     - file: problem/problem-high-cardinality
       title: "High Cardinality"
-      # - file: problem/problem-upper-lower-type
-      # - file: problem/problem-high-cardinality-type
-      #  - file: problem/problem-singular-plural-type
   
 # TODO - Archive
 #
