@@ -41,7 +41,7 @@ cur_objects_df[" accessionYear:and:accessionYear:minInclusive:accessionYear:maxI
 The above exception was the direct cause of the following exception:
 
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m<ipython-input-4-6c8b086e1c84>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-3-6c8b086e1c84>[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mcur_objects_df[0m[0;34m[[0m[0;34m" accessionYear:and:accessionYear:minInclusive:accessionYear:maxInclusive:2"[0m[0;34m][0m[0;34m.[0m[0mvalue_counts[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Factcheck (Techniques) &#8212; My sample book</title>
+    <title>Factcheck (Techniques) &#8212; V&amp;A Collections Metadata Quality</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -74,10 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/va-red.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -320,7 +320,11 @@
                 
   <div class="section" id="factcheck-techniques">
 <h1>Factcheck (Techniques)<a class="headerlink" href="#factcheck-techniques" title="Permalink to this headline">¶</a></h1>
-<p>This compares the listed production dates with the object materials, and identifies any cases where a material is stated that did not exist at the time of the object’s known production.</p>
+<p>This compares the object’s production dates with the object’ techniques, and identifies any cases where a technique is stated that did not exist at the time of the object’s known production. This could indicate:</p>
+<ul class="simple">
+<li><p>A typo in dates</p></li>
+<li><p>A production date range given that could be more tightly specified (e.g. if a technique was only available from a certain date, this sets the earliest bound of the date range, rather than a century or decade range being used)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Objects </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">objects_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">falseobjects_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> contain possible dating or material errors&quot;</span><span class="p">)</span>
@@ -372,73 +376,8 @@
   </thead>
   <tbody>
     <tr>
-      <th>643</th>
-      <td>O638736</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>2267</th>
-      <td>O752272</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>2120</th>
-      <td>O1276615</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>4068</th>
-      <td>O752357</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>2985</th>
-      <td>O1277872</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>3560</th>
-      <td>O702083</td>
+      <th>3559</th>
+      <td>O702084</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -450,34 +389,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>2209</th>
-      <td>O752330</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>1202</th>
-      <td>O1152001</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>3390</th>
-      <td>O1273969</td>
+      <th>8835</th>
+      <td>O186595</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -489,8 +402,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>8479</th>
-      <td>O1281007</td>
+      <th>633</th>
+      <td>O638746</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -502,8 +415,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>7681</th>
-      <td>O1025423</td>
+      <th>2986</th>
+      <td>O834497</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -515,8 +428,99 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>1773</th>
-      <td>O1277048</td>
+      <th>2317</th>
+      <td>O752222</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4035</th>
+      <td>O752390</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>8776</th>
+      <td>O764854</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4285</th>
+      <td>O1139751</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>7572</th>
+      <td>O1283729</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>4039</th>
+      <td>O752386</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>10702</th>
+      <td>O1281672</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>3641</th>
+      <td>O1140665</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -541,8 +545,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>2196</th>
-      <td>O752343</td>
+      <th>2205</th>
+      <td>O752334</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -554,21 +558,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>2036</th>
-      <td>O1276743</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>1834</th>
-      <td>O1276975</td>
+      <th>6774</th>
+      <td>O1285523</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -580,8 +571,47 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>2041</th>
-      <td>O1276738</td>
+      <th>2299</th>
+      <td>O752240</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>8516</th>
+      <td>O201021</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>2210</th>
+      <td>O752329</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-1.0</td>
+      <td>-1</td>
+    </tr>
+    <tr>
+      <th>2847</th>
+      <td>O1278012</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -593,34 +623,8 @@
       <td>-1</td>
     </tr>
     <tr>
-      <th>2562</th>
-      <td>O1279842</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>8769</th>
-      <td>O764861</td>
-      <td>1.0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>-1.0</td>
-      <td>-1</td>
-    </tr>
-    <tr>
-      <th>8778</th>
-      <td>O764852</td>
+      <th>8533</th>
+      <td>O1398797</td>
       <td>1.0</td>
       <td>1</td>
       <td>1</td>
@@ -673,7 +677,7 @@
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Richard Palmer<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

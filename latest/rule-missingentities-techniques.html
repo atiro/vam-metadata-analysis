@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entity Absence Detection (Techniques) &#8212; My sample book</title>
+    <title>Entity Absence Detection (Techniques) &#8212; V&amp;A Collections Metadata Quality</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Factcheck (Materials)" href="rule-factcheck-material.html" />
-    <link rel="prev" title="Entity Absence Detection" href="rule-missingentities-material.html" />
+    <link rel="prev" title="Entity Absence Detection (Materials)" href="rule-missingentities-material.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/va-red.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -187,6 +187,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="rule-factcheck-material.html">
    Factcheck - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rule-factcheck-techniques.html">
+   Factcheck - Techniques
   </a>
  </li>
 </ul>
@@ -328,6 +333,7 @@
                 
   <div class="section" id="entity-absence-detection-techniques">
 <h1>Entity Absence Detection (Techniques)<a class="headerlink" href="#entity-absence-detection-techniques" title="Permalink to this headline">¶</a></h1>
+<p>This looks for any technique terms not added to the techniques field, but are mentioned in the materialsAndTechniques field in an object.</p>
 <div class="cell tag_hide-input tag_full-width docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
@@ -374,12 +380,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-027199520e014b58bda528f160ac9c7f"></div>
+<div id="altair-viz-fef8de97daab4d9fb47a8494786fdc15"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-027199520e014b58bda528f160ac9c7f") {
-      outputDiv = document.getElementById("altair-viz-027199520e014b58bda528f160ac9c7f");
+    if (outputDiv.id !== "altair-viz-fef8de97daab4d9fb47a8494786fdc15") {
+      outputDiv = document.getElementById("altair-viz-fef8de97daab4d9fb47a8494786fdc15");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -469,24 +475,24 @@
   </thead>
   <tbody>
     <tr>
-      <th>9278</th>
-      <td>O73941</td>
-      <td>EAS</td>
-      <td>1.00</td>
+      <th>3312</th>
+      <td>O35522</td>
+      <td>MoC</td>
+      <td>0.75</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>1</td>
-      <td>2</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>12825</th>
-      <td>O112062</td>
+      <th>1698</th>
+      <td>O114953</td>
       <td>MET</td>
       <td>1.00</td>
       <td>1</td>
@@ -496,77 +502,45 @@
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7872</th>
-      <td>O76804</td>
-      <td>EAS</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7366</th>
-      <td>O252140</td>
-      <td>CER</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>815</th>
-      <td>O697925</td>
-      <td>PDP</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
       <td>2</td>
-      <td>2</td>
-      <td>2</td>
+      <td>1</td>
+      <td>1</td>
     </tr>
     <tr>
-      <th>3539</th>
-      <td>O302076</td>
+      <th>4270</th>
+      <td>O125295</td>
       <td>FWK</td>
-      <td>0.75</td>
+      <td>1.00</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>0</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>8851</th>
-      <td>O1313367</td>
+      <th>7958</th>
+      <td>O434796</td>
+      <td>EAS</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1978</th>
+      <td>O40392</td>
       <td>SSEA</td>
       <td>0.75</td>
       <td>1</td>
@@ -581,8 +555,40 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>5752</th>
-      <td>O72487</td>
+      <th>4680</th>
+      <td>O106813</td>
+      <td>MET</td>
+      <td>0.75</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3611</th>
+      <td>O354328</td>
+      <td>T&amp;F</td>
+      <td>0.75</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4577</th>
+      <td>O307544</td>
       <td>CER</td>
       <td>1.00</td>
       <td>1</td>
@@ -597,9 +603,9 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>3560</th>
-      <td>O89157</td>
-      <td>SCP</td>
+      <th>6860</th>
+      <td>O362602</td>
+      <td>T&amp;F</td>
       <td>0.75</td>
       <td>1</td>
       <td>1</td>
@@ -613,9 +619,9 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>4695</th>
-      <td>O114614</td>
-      <td>FWK</td>
+      <th>174</th>
+      <td>O334202</td>
+      <td>CER</td>
       <td>1.00</td>
       <td>1</td>
       <td>1</td>
@@ -629,9 +635,25 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>1193</th>
-      <td>O182616</td>
-      <td>MES</td>
+      <th>2800</th>
+      <td>O593788</td>
+      <td>PDP</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5697</th>
+      <td>O94663</td>
+      <td>MET</td>
       <td>0.75</td>
       <td>1</td>
       <td>1</td>
@@ -645,24 +667,8 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>511</th>
-      <td>O157774</td>
-      <td>MET</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7359</th>
-      <td>O1141005</td>
+      <th>2411</th>
+      <td>O1034114</td>
       <td>PDP</td>
       <td>0.75</td>
       <td>1</td>
@@ -673,28 +679,12 @@
       <td>1</td>
       <td>1</td>
       <td>0</td>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>5311</th>
-      <td>O349461</td>
-      <td>SCP</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>2398</th>
-      <td>O70488</td>
+      <th>264</th>
+      <td>O448175</td>
       <td>EAS</td>
       <td>0.75</td>
       <td>1</td>
@@ -709,40 +699,8 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>2864</th>
-      <td>O370334</td>
-      <td>FWK</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5999</th>
-      <td>O166201</td>
-      <td>SSEA</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>965</th>
-      <td>O133281</td>
+      <th>190</th>
+      <td>O1354298</td>
       <td>CER</td>
       <td>1.00</td>
       <td>1</td>
@@ -752,14 +710,14 @@
       <td>1</td>
       <td>1</td>
       <td>1</td>
-      <td>2</td>
+      <td>1</td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>8172</th>
-      <td>O86615</td>
-      <td>MES</td>
+      <th>226</th>
+      <td>O368594</td>
+      <td>FWK</td>
       <td>0.75</td>
       <td>1</td>
       <td>1</td>
@@ -773,8 +731,24 @@
       <td>1</td>
     </tr>
     <tr>
-      <th>2596</th>
-      <td>O1227041</td>
+      <th>10760</th>
+      <td>O1192972</td>
+      <td>EAS</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7322</th>
+      <td>O1139219</td>
       <td>SSEA</td>
       <td>1.00</td>
       <td>1</td>
@@ -785,6 +759,38 @@
       <td>1</td>
       <td>1</td>
       <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>586</th>
+      <td>O1191430</td>
+      <td>MoC</td>
+      <td>0.75</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2642</th>
+      <td>O321503</td>
+      <td>FWK</td>
+      <td>0.75</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>1</td>
     </tr>
@@ -820,7 +826,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="rule-missingentities-material.html" title="previous page">Entity Absence Detection</a>
+    <a class='left-prev' id="prev-link" href="rule-missingentities-material.html" title="previous page">Entity Absence Detection (Materials)</a>
     <a class='right-next' id="next-link" href="rule-factcheck-material.html" title="next page">Factcheck (Materials)</a>
 
         </div>
@@ -831,7 +837,7 @@
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Richard Palmer<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

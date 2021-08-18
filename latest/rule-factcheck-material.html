@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Factcheck (Materials) &#8212; My sample book</title>
+    <title>Factcheck (Materials) &#8212; V&amp;A Collections Metadata Quality</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Long/Short Unique Object Types" href="../problem/problem-long-short-objecttype.html" />
+    <link rel="next" title="Factcheck (Techniques)" href="rule-factcheck-techniques.html" />
     <link rel="prev" title="Entity Absence Detection (Techniques)" href="rule-missingentities-techniques.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -74,10 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/va-red.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -187,6 +187,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Factcheck - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="rule-factcheck-techniques.html">
+   Factcheck - Techniques
   </a>
  </li>
 </ul>
@@ -318,17 +323,12 @@
 <p>This compares the listed production dates with the object materials, and identifies any cases where a material is stated that did not exist at the time of the object’s known production.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Objects </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">total_objects</span><span class="p">)</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">falseobjects_df</span><span class="p">)</span><span class="si">}</span><span class="s2">) contain possible dating or material errors&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Objects </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">objects_df</span><span class="p">)</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">falseobjects_df</span><span class="p">)</span><span class="si">}</span><span class="s2">) contain possible dating or material errors&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">9</span><span class="n">c2936f2e541</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Objects </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">total_objects</span><span class="p">)</span><span class="si">}</span><span class="s2"> of which </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">falseobjects_df</span><span class="p">)</span><span class="si">}</span><span class="s2">) contain possible dating or material errors&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;total_objects&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Objects 1238433 of which 14) contain possible dating or material errors
 </pre></div>
 </div>
 </div>
@@ -387,7 +387,7 @@ Name: [systemNumber, dtype: object
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="rule-missingentities-techniques.html" title="previous page">Entity Absence Detection (Techniques)</a>
-    <a class='right-next' id="next-link" href="../problem/problem-long-short-objecttype.html" title="next page">Long/Short Unique Object Types</a>
+    <a class='right-next' id="next-link" href="rule-factcheck-techniques.html" title="next page">Factcheck (Techniques)</a>
 
         </div>
         
@@ -397,7 +397,7 @@ Name: [systemNumber, dtype: object
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Richard Palmer<br/>
         
             &copy; Copyright 2021.<br/>
       </p>
