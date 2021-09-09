@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Long/Short Unique Object Types &#8212; V&amp;A Collections Metadata Quality</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="High Cardinality Fields" href="problem-high-cardinality.html" />
+    <link rel="prev" title="Upper/Lower Object Type" href="problem-upper-lower.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/va-red.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   V&amp;A Metadata Quality Report
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-latest.html">
+   Published Objects (Monthly Change)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Change (Monthly)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-change.html">
+   Published Objects (Latest)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-same-monthly-field-completeness-departmental.html">
+   Completeness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-monthly-field-completeness-departmental.html">
+   Completeness (incl. new/del)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-field-retrievabilty-same.html">
+   Retrieval
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changes/change-field-retrievabilty.html">
+   Retrieval (incl. new/del)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Latest
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-departmental.html">
+   Completeness (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-decades.html">
+   Completeness (Decades)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-departmental.html">
+   Retrievability (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-decades.html">
+   Retrievability (Decades)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Quantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-material.html">
+   Missing Entities - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-techniques.html">
+   Missing Entities - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-material.html">
+   Factcheck - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-techniques.html">
+   Factcheck - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="problem-singular-plural.html">
+   Singular/Plural Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="problem-upper-lower.html">
+   Upper/Lower Object Types
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Unquantifiable)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Long/Short Unique Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="problem-high-cardinality.html">
+   High Cardinality
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/problem/problem-long-short-objecttype.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fproblem/problem-long-short-objecttype.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/problem/problem-long-short-objecttype.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Long/Short Unique Object Types
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#top-20-longest-titles-for-unique-object-types">
+     Top 20 Longest Titles for unique object types
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#top-20-shortest-titles-for-unique-object-types">
+   Top 20 shortest titles for unique object types
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="long-short-unique-object-types">
+<h1>Long/Short Unique Object Types<a class="headerlink" href="#long-short-unique-object-types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="top-20-longest-titles-for-unique-object-types">
+<h2>Top 20 Longest Titles for unique object types<a class="headerlink" href="#top-20-longest-titles-for-unique-object-types" title="Permalink to this headline">¶</a></h2>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">longest_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;System Number&#39;</span><span class="p">,</span><span class="s1">&#39;Object Type&#39;</span><span class="p">])</span>
+
+<span class="c1"># Find them in the data to insert system number</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">longest_top20</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="n">obj_type</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">objectType</span>
+    <span class="n">orig_obj</span> <span class="o">=</span> <span class="n">objects_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">objects_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">obj_type</span><span class="p">]</span>
+    <span class="n">obj_sysnum</span> <span class="o">=</span> <span class="n">orig_obj</span><span class="p">[</span><span class="s2">&quot; systemNumber&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">longest_df</span> <span class="o">=</span> <span class="n">longest_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;System Number&quot;</span><span class="p">:</span> <span class="n">obj_sysnum</span><span class="p">,</span> <span class="s2">&quot;Object Type&quot;</span><span class="p">:</span> <span class="n">obj_type</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+<span class="n">longest_df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">&#39;Top 20 longest object types&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style  type="text/css" >
+</style><table id="T_3db86fc0_005f_11ec_b200_819d4e828462" ><caption>Top 20 longest object types</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >System Number</th>        <th class="col_heading level0 col1" >Object Type</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row0" class="row_heading level0 row0" >0</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row0_col0" class="data row0 col0" >O1123034</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row0_col1" class="data row0 col1" >quick's candle-light amusement,MoC,1981,O1123041,0.051282,1.0,0.111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Number 1 - burton's anatomy of grimace,MoC,1970,O1123040,0.025641,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Changeable portraits of men,MoC,1954,O1123037,0.051282,1.0,0.111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Changeable portraits of ladies,MoC,1954,O1123036,0.051282,1.0,0.111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Changeable gentlemen,MoC,1954,O1123035,0.051282,1.0,0.111111,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+the joyful young girl in 1000 comic attitudes"</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row1" class="row_heading level0 row1" >1</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row1_col0" class="data row1 col0" >O347341</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row1_col1" class="data row1 col1" >Virgin worshipping the Infant Christ with  St John the Baptist. Plaster cast purchased from Oronzio Lelli in 1890 after 19th century relief by Giovanni Bastianini.</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row2" class="row_heading level0 row2" >2</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row2_col0" class="data row2 col0" >O121129</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row2_col1" class="data row2 col1" >Set of stacking storage boxes, clear grey-green glass. Designed by Wilhelm Wagenfeld for Vereinigte Lausitzer Glaswerke. Germany (Saxony), Weisswasser, about 1938</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row3" class="row_heading level0 row3" >3</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row3_col0" class="data row3 col0" >O322697</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row3_col1" class="data row3 col1" >Ebony mounted in silver, silver-gilt and copper-gilt. The instruments of silver-gilt, shell, steel and ivory. German, unmarked, possibly 1610-20 or 1800-1900</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row4" class="row_heading level0 row4" >4</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row4_col0" class="data row4 col0" >O378860</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row4_col1" class="data row4 col1" >altar cross, copper gilt on a wooden core, set with nielloed silver plaques, North Italian, dated 1552, signed Berardino de Nofrico</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row5" class="row_heading level0 row5" >5</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row5_col0" class="data row5 col0" >O503432</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row5_col1" class="data row5 col1" >Design for a scene on the border of the Wellington shield made in silver, [The Duke of Wellington before the House of Commons]</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row6" class="row_heading level0 row6" >6</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row6_col0" class="data row6 col0" >O503433</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row6_col1" class="data row6 col1" >Design for a scene on the border of the Wellington shield made in silver, The Battle of the Pyrenees, Bordeaux delivered</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row7" class="row_heading level0 row7" >7</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row7_col0" class="data row7 col0" >O503438</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row7_col1" class="data row7 col1" >Design for a scene on the border of the Wellington shield made in silver, The Passage of the Duoro Oporto Liberated 1800</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row8" class="row_heading level0 row8" >8</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row8_col0" class="data row8 col0" >O380184</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row8_col1" class="data row8 col1" >Door handle with escutcheon, wrought iron, made in Nuremberg, 16th century with 19th century knocker and striking plate</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row9" class="row_heading level0 row9" >9</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row9_col0" class="data row9 col0" >O503437</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row9_col1" class="data row9 col1" >Design for a scene on the border of the Wellington shield made in silver, The Lines of Torres Vedras March 6 1811</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row10" class="row_heading level0 row10" >10</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row10_col0" class="data row10 col0" >O503440</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row10_col1" class="data row10 col1" >Design for a scene on the border of the Wellington shield made in silver, The Victory of Assaye September 23 1803</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row11" class="row_heading level0 row11" >11</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row11_col0" class="data row11 col0" >O324363</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row11_col1" class="data row11 col1" >Chatelaine, pencil holder, spectacle-case, pincushion, penknife, scissors with case and scent bottle with stopper</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row12" class="row_heading level0 row12" >12</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row12_col0" class="data row12 col0" >O503436</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row12_col1" class="data row12 col1" >Design for a scene on the border of the Wellington shield made in silver, Badajoz assaulted: taken April 6 1812</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row13" class="row_heading level0 row13" >13</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row13_col0" class="data row13 col0" >O503439</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row13_col1" class="data row13 col1" >Design for a scene on the border of the Wellington shield made in silver, The Battle of Vimeira August 21 1809</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row14" class="row_heading level0 row14" >14</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row14_col0" class="data row14 col0" >O503431</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row14_col1" class="data row14 col1" >Design for a scene on the border of the Wellington shield made in silver, The Dukedom of Wellington conferred</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row15" class="row_heading level0 row15" >15</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row15_col0" class="data row15 col0" >O503434</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row15_col1" class="data row15 col1" >Design for a scene on the border of the Wellington shield made in silver, The Battle of Vitoria June 9 1813</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row16" class="row_heading level0 row16" >16</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row16_col0" class="data row16 col0" >O1360270</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row16_col1" class="data row16 col1" >The act [sic] of King Henry IV ; Henry VIII ; Richard II ; King Lear. W.C. Macready's acting copies</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row17" class="row_heading level0 row17" >17</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row17_col0" class="data row17 col0" >O324364</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row17_col1" class="data row17 col1" >Chatelaine with pencil holder, memo pad, pincushion, scissors holder, needle case and tape measure</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row18" class="row_heading level0 row18" >18</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row18_col0" class="data row18 col0" >O1351626</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row18_col1" class="data row18 col1" >The Encyclopaedia Britannica : a dictionary of arts, sciences, literature and general information</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc0_005f_11ec_b200_819d4e828462level0_row19" class="row_heading level0 row19" >19</th>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row19_col0" class="data row19 col0" >O683928</td>
+                        <td id="T_3db86fc0_005f_11ec_b200_819d4e828462row19_col1" class="data row19 col1" >A design for the detachable arms of a silver candelabrum by an anonymous draughtsman, c. 1780</td>
+            </tr>
+    </tbody></table></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="top-20-shortest-titles-for-unique-object-types">
+<h1>Top 20 shortest titles for unique object types<a class="headerlink" href="#top-20-shortest-titles-for-unique-object-types" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shortest_top20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">top_unique_names_series</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:],</span> <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;objectType&#39;</span><span class="p">})</span>
+<span class="n">shortest_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;System Number&#39;</span><span class="p">,</span><span class="s1">&#39;Object Type&#39;</span><span class="p">])</span>
+
+<span class="c1"># Find them in the data to insert system number</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">shortest_top20</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="n">obj_type</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">objectType</span>
+    <span class="n">orig_obj</span> <span class="o">=</span> <span class="n">objects_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">objects_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">obj_type</span><span class="p">]</span>
+    <span class="n">obj_sysnum</span> <span class="o">=</span> <span class="n">orig_obj</span><span class="p">[</span><span class="s2">&quot; systemNumber&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">shortest_df</span> <span class="o">=</span> <span class="n">shortest_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;System Number&quot;</span><span class="p">:</span> <span class="n">obj_sysnum</span><span class="p">,</span> <span class="s2">&quot;Object Type&quot;</span><span class="p">:</span> <span class="n">obj_type</span><span class="p">},</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+<span class="n">shortest_df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">&#39;Top 20 shortest object types&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style  type="text/css" >
+</style><table id="T_3db86fc1_005f_11ec_b200_819d4e828462" ><caption>Top 20 shortest object types</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >System Number</th>        <th class="col_heading level0 col1" >Object Type</th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row0" class="row_heading level0 row0" >0</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row0_col0" class="data row0 col0" >O1514172</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row0_col1" class="data row0 col1" >jar</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row1" class="row_heading level0 row1" >1</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row1_col0" class="data row1 col0" >O325388</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row1_col1" class="data row1 col1" >Gag</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row2" class="row_heading level0 row2" >2</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row2_col0" class="data row2 col0" >O1191300</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row2_col1" class="data row2 col1" >Cot</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row3" class="row_heading level0 row3" >3</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row3_col0" class="data row3 col0" >O497847</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row3_col1" class="data row3 col1" >KEY</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row4" class="row_heading level0 row4" >4</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row4_col0" class="data row4 col0" >O1268317</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row4_col1" class="data row4 col1" >LPs</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row5" class="row_heading level0 row5" >5</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row5_col0" class="data row5 col0" >O114375</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row5_col1" class="data row5 col1" >Bur</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row6" class="row_heading level0 row6" >6</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row6_col0" class="data row6 col0" >O1194272</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row6_col1" class="data row6 col1" >oil</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row7" class="row_heading level0 row7" >7</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row7_col0" class="data row7 col0" >O1265593</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row7_col1" class="data row7 col1" >tin</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row8" class="row_heading level0 row8" >8</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row8_col0" class="data row8 col0" >O1126984</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row8_col1" class="data row8 col1" >Ski</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row9" class="row_heading level0 row9" >9</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row9_col0" class="data row9 col0" >O455452</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row9_col1" class="data row9 col1" >Maa</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row10" class="row_heading level0 row10" >10</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row10_col0" class="data row10 col0" >O468947</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row10_col1" class="data row10 col1" >JUG</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row11" class="row_heading level0 row11" >11</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row11_col0" class="data row11 col0" >O376761</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row11_col1" class="data row11 col1" >Orb</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row12" class="row_heading level0 row12" >12</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row12_col0" class="data row12 col0" >O1115348</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row12_col1" class="data row12 col1" >Bat</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row13" class="row_heading level0 row13" >13</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row13_col0" class="data row13 col0" >O1396360</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row13_col1" class="data row13 col1" >rod</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row14" class="row_heading level0 row14" >14</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row14_col0" class="data row14 col0" >O1517192</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row14_col1" class="data row14 col1" >fez</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row15" class="row_heading level0 row15" >15</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row15_col0" class="data row15 col0" >O21602</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row15_col1" class="data row15 col1" >Tub</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row16" class="row_heading level0 row16" >16</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row16_col0" class="data row16 col0" >O9645</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row16_col1" class="data row16 col1" >Man</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row17" class="row_heading level0 row17" >17</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row17_col0" class="data row17 col0" >O101625</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row17_col1" class="data row17 col1" >Cd</td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row18" class="row_heading level0 row18" >18</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row18_col0" class="data row18 col0" >O1160639</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row18_col1" class="data row18 col1" > </td>
+            </tr>
+            <tr>
+                        <th id="T_3db86fc1_005f_11ec_b200_819d4e828462level0_row19" class="row_heading level0 row19" >19</th>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row19_col0" class="data row19 col0" >O1026236</td>
+                        <td id="T_3db86fc1_005f_11ec_b200_819d4e828462row19_col1" class="data row19 col1" >X</td>
+            </tr>
+    </tbody></table></div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./problem"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="problem-upper-lower.html" title="previous page">Upper/Lower Object Type</a>
+    <a class='right-next' id="next-link" href="problem-high-cardinality.html" title="next page">High Cardinality Fields</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Richard Palmer<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

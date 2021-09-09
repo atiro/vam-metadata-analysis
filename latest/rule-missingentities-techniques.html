@@ -385,12 +385,12 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-fef8de97daab4d9fb47a8494786fdc15"></div>
+<div id="altair-viz-46943b5fd61c42c2a57890b78493df1b"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-fef8de97daab4d9fb47a8494786fdc15") {
-      outputDiv = document.getElementById("altair-viz-fef8de97daab4d9fb47a8494786fdc15");
+    if (outputDiv.id !== "altair-viz-46943b5fd61c42c2a57890b78493df1b") {
+      outputDiv = document.getElementById("altair-viz-46943b5fd61c42c2a57890b78493df1b");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -440,368 +440,35 @@
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_df</span> <span class="o">=</span> <span class="n">missing_entities_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">sample_df</span>
+<span class="n">sample_df</span><span class="p">[</span><span class="s1">&#39;[systemNumber&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>[systemNumber</th>
-      <th>collectionCode</th>
-      <th>completeness:TOTAL</th>
-      <th>existence:systemNumber</th>
-      <th>existence:collectionCode</th>
-      <th>existence:materialsAndTechniques</th>
-      <th>existence:techniques</th>
-      <th>cardinality:systemNumber</th>
-      <th>cardinality:collectionCode</th>
-      <th>cardinality:materialsAndTechniques</th>
-      <th>cardinality:techniques</th>
-      <th>techniques:entityabsence:materialsAndTechniques:entityAbsence</th>
-      <th>ruleCatalog:score]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>3312</th>
-      <td>O35522</td>
-      <td>MoC</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1698</th>
-      <td>O114953</td>
-      <td>MET</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4270</th>
-      <td>O125295</td>
-      <td>FWK</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7958</th>
-      <td>O434796</td>
-      <td>EAS</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1978</th>
-      <td>O40392</td>
-      <td>SSEA</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4680</th>
-      <td>O106813</td>
-      <td>MET</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3611</th>
-      <td>O354328</td>
-      <td>T&amp;F</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4577</th>
-      <td>O307544</td>
-      <td>CER</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>6860</th>
-      <td>O362602</td>
-      <td>T&amp;F</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>O334202</td>
-      <td>CER</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2800</th>
-      <td>O593788</td>
-      <td>PDP</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>5697</th>
-      <td>O94663</td>
-      <td>MET</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2411</th>
-      <td>O1034114</td>
-      <td>PDP</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>264</th>
-      <td>O448175</td>
-      <td>EAS</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>190</th>
-      <td>O1354298</td>
-      <td>CER</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>226</th>
-      <td>O368594</td>
-      <td>FWK</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>10760</th>
-      <td>O1192972</td>
-      <td>EAS</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>7322</th>
-      <td>O1139219</td>
-      <td>SSEA</td>
-      <td>1.00</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>586</th>
-      <td>O1191430</td>
-      <td>MoC</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2642</th>
-      <td>O321503</td>
-      <td>FWK</td>
-      <td>0.75</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7802     O187216
+7172    O1530760
+4093      O64477
+4174      O81125
+9353      O89354
+7737     O152451
+2784     O179848
+4125      O45648
+3594     O351896
+6946    O1379883
+6920      O93848
+872      O470331
+3056     O474592
+2820    O1258558
+4537    O1389346
+193      O468430
+1792     O458546
+7564    O1379824
+274      O313361
+4781     O106699
+Name: [systemNumber, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrieval (incl. new/del) &#8212; V&amp;A Collections Metadata Quality</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Completeness (Departmental)" href="../latest/field-completeness-departmental.html" />
+    <link rel="prev" title="Retrieval" href="change-field-retrievabilty-same.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/va-red.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   V&amp;A Metadata Quality Report
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-latest.html">
+   Published Objects (Monthly Change)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Change (Monthly)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-change.html">
+   Published Objects (Latest)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-same-monthly-field-completeness-departmental.html">
+   Completeness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-monthly-field-completeness-departmental.html">
+   Completeness (incl. new/del)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-field-retrievabilty-same.html">
+   Retrieval
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Retrieval (incl. new/del)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Latest
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-departmental.html">
+   Completeness (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-decades.html">
+   Completeness (Decades)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-departmental.html">
+   Retrievability (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-decades.html">
+   Retrievability (Decades)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Quantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-material.html">
+   Missing Entities - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-techniques.html">
+   Missing Entities - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-material.html">
+   Factcheck - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-techniques.html">
+   Factcheck - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-singular-plural.html">
+   Singular/Plural Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-upper-lower.html">
+   Upper/Lower Object Types
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Unquantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-long-short-objecttype.html">
+   Long/Short Unique Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-high-cardinality.html">
+   High Cardinality
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/changes/change-field-retrievabilty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchanges/change-field-retrievabilty.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/changes/change-field-retrievabilty.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="retrieval-incl-new-del">
+<h1>Retrieval (incl. new/del)<a class="headerlink" href="#retrieval-incl-new-del" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide-input tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span><span class="mi">0</span>
+
+<span class="n">dept_col_counts</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">depts</span> <span class="o">=</span> <span class="n">tidied_cur_df</span><span class="p">[</span><span class="s1">&#39; collectionCode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">charts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hcharts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">dept_code</span> <span class="ow">in</span> <span class="n">depts</span><span class="p">:</span>
+  <span class="n">dept_diff_rows_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+  <span class="n">dept_cur_stats_df</span> <span class="o">=</span> <span class="n">tidied_cur_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tidied_cur_df</span><span class="p">[</span><span class="s1">&#39; collectionCode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">dept_code</span><span class="p">]</span>
+  <span class="n">dept_prev_stats_df</span> <span class="o">=</span> <span class="n">tidied_prev_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tidied_prev_df</span><span class="p">[</span><span class="s1">&#39; collectionCode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">dept_code</span><span class="p">]</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dept_cur_stats_df</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="c1"># Ignore EXH and other errartic departments</span>
+    <span class="k">continue</span>
+
+  <span class="c1"># Now need to loop over each completeness coll in turn</span>
+  <span class="k">for</span> <span class="n">cur_column</span><span class="p">,</span> <span class="n">prev_column</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dept_cur_stats_df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">dept_prev_stats_df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+        
+    <span class="c1"># Group into counts of percentages 0-10, 10-20, ... 90-100</span>
+    <span class="c1"># dept_col_counts = dept_stats_df[column].value_counts(bins=10, sort=False)</span>
+    
+    <span class="n">cur_dept_col_counts</span> <span class="o">=</span> <span class="n">dept_cur_stats_df</span><span class="p">[</span><span class="n">cur_column</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dept_cur_stats_df</span><span class="p">[</span><span class="n">cur_column</span><span class="p">],</span> <span class="n">ranges</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0-10%&quot;</span><span class="p">,</span><span class="s2">&quot;10-20%&quot;</span><span class="p">,</span><span class="s2">&quot;20-30%&quot;</span><span class="p">,</span><span class="s2">&quot;30-40%&quot;</span><span class="p">,</span><span class="s2">&quot;40-50%&quot;</span><span class="p">,</span><span class="s2">&quot;50-60%&quot;</span><span class="p">,</span><span class="s2">&quot;60-70%&quot;</span><span class="p">,</span><span class="s2">&quot;70-80%&quot;</span><span class="p">,</span><span class="s2">&quot;80-90%&quot;</span><span class="p">,</span><span class="s2">&quot;90-100%&quot;</span><span class="p">],</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="n">prev_dept_col_counts</span> <span class="o">=</span> <span class="n">dept_prev_stats_df</span><span class="p">[</span><span class="n">prev_column</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dept_prev_stats_df</span><span class="p">[</span><span class="n">prev_column</span><span class="p">],</span> <span class="n">ranges</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0-10%&quot;</span><span class="p">,</span><span class="s2">&quot;10-20%&quot;</span><span class="p">,</span><span class="s2">&quot;20-30%&quot;</span><span class="p">,</span><span class="s2">&quot;30-40%&quot;</span><span class="p">,</span><span class="s2">&quot;40-50%&quot;</span><span class="p">,</span><span class="s2">&quot;50-60%&quot;</span><span class="p">,</span><span class="s2">&quot;60-70%&quot;</span><span class="p">,</span><span class="s2">&quot;70-80%&quot;</span><span class="p">,</span><span class="s2">&quot;80-90%&quot;</span><span class="p">,</span><span class="s2">&quot;90-100%&quot;</span><span class="p">],</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="n">diff_dept_col_counts</span> <span class="o">=</span> <span class="n">cur_dept_col_counts</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">prev_dept_col_counts</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">dept_diff_rows_df</span> <span class="o">=</span> <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diff_dept_col_counts</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+<span class="c1">#    dept_col_counts.name = column</span>
+<span class="c1">#    dept_rows_df = dept_rows_df.append(dept_col_counts, ignore_index=False)</span>
+    
+  <span class="n">dept_diff_rows_df</span> <span class="o">=</span> <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Retrievability&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Percentages&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span>
+    <span class="c1"># TO handle converting from CategoricalIndex - may change https://github.com/pandas-dev/pandas/issues/19136</span>
+  <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+ <span class="c1">#   print(dept_rows_df)</span>
+  <span class="n">dept_diff_rows_df</span> <span class="o">=</span> <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+  <span class="n">dept_diff_rows_melt_df</span> <span class="o">=</span> <span class="n">dept_diff_rows_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Retrievability&#39;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Percentage&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Change&#39;</span><span class="p">)</span>
+  <span class="n">dept_diff_rows_melt_df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+  <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">dept_diff_rows_melt_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_circle</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;Percentage:O&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Percentage Complete&quot;</span><span class="p">)),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Retrievability:O&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Size</span><span class="p">(</span><span class="s1">&#39;Size:Q&#39;</span><span class="p">),</span>
+    <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Direction:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Fewer Records&#39;</span><span class="p">,</span> <span class="s1">&#39;More Records&#39;</span><span class="p">],</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">])),</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Change&#39;</span><span class="p">]</span>
+  <span class="p">)</span><span class="o">.</span><span class="n">transform_calculate</span><span class="p">(</span>
+      <span class="n">Size</span><span class="o">=</span><span class="s1">&#39;abs(datum.Change)&#39;</span><span class="p">,</span>
+      <span class="n">Direction</span><span class="o">=</span><span class="s1">&#39;if(datum.Change &lt; 0, &quot;Fewer Records&quot;, &quot;More Records&quot;)&#39;</span>
+  <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">dept_code</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    
+  <span class="n">charts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chart</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">hcharts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span><span class="o">*</span><span class="n">charts</span><span class="p">))</span>
+      <span class="n">charts</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">else</span><span class="p">:</span>
+      <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>  
+        
+<span class="n">hcharts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span><span class="o">*</span><span class="n">charts</span><span class="p">))</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">vconcat</span><span class="p">(</span><span class="o">*</span><span class="n">hcharts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-d9dcef6c94f54ac4b933a851f42188a3"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-d9dcef6c94f54ac4b933a851f42188a3") {
+      outputDiv = document.getElementById("altair-viz-d9dcef6c94f54ac4b933a851f42188a3");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"hconcat": [{"data": {"name": "data-5d132a7c752763c9c63d78c7d0c72439"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "T&P", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-d748cb2f9cfe4cd001e97f3eddc9a316"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "EAS", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-7c67e82df5614d748ce2feb66cc8abf2"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "MoC", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-001c824db7e3885402ccaa3e5dbc63e1"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "PDP", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-0369b6ef3b54fb703e8fe2d94d460c7b"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "MET", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-3ba7fe7e3bdf52e9ac95c17421bfd4cf"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "CER", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-c107552ec3064de26d696fea9a3b96c7"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "SCP", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-99d523f051a7bae61c04889b642d61ce"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "FWK", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-1c77be1494529be96aa070f8745c9846"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "SSEA", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-1f77e872bd00705ff53c2a630b721a43"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "DOP", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-908717bb8183e35f28b75a2b4661d04b"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "T&F", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-57c5e2191b00698f28ba4a15414cb359"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "AAD", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-fc62cd1b88d6e9082a3699d335016cd1"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "MES", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-f206358a4abaec37a84e10865aec59cd"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "NAL", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": [{"data": {"name": "data-36097c90c6d588d7448887df7fa122d7"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "DAD", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}, {"data": {"name": "data-d91c45289da8f30681765f0ddf149d23"}, "mark": "circle", "encoding": {"color": {"type": "nominal", "field": "Direction", "scale": {"domain": ["Fewer Records", "More Records"], "range": ["red", "green"]}}, "size": {"type": "quantitative", "field": "Size"}, "tooltip": [{"type": "quantitative", "field": "Change"}], "x": {"type": "ordinal", "axis": {"title": "Percentage Complete"}, "field": "Percentage"}, "y": {"type": "ordinal", "field": "Retrievability"}}, "height": 200, "title": "WED", "transform": [{"calculate": "abs(datum.Change)", "as": "Size"}, {"calculate": "if(datum.Change < 0, \"Fewer Records\", \"More Records\")", "as": "Direction"}], "width": 300}]}, {"hconcat": []}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-5d132a7c752763c9c63d78c7d0c72439": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": 108.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": 108.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": 119.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -28.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -70.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -70.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -68.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 85.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 86.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 110.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -100.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -91.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -137.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": -11.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": -2.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 50.0}], "data-d748cb2f9cfe4cd001e97f3eddc9a316": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -101.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -103.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -221.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": 16.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -18.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -18.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 93.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 141.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 143.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 130.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -5.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -5.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 15.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 1.0}], "data-7c67e82df5614d748ce2feb66cc8abf2": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -258.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -259.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -278.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -481.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -61.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -64.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -77.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -140.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": -151.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -98.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -59.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -45.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -65.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": -8.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": -7.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": -2.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": -6.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": -45.0}], "data-001c824db7e3885402ccaa3e5dbc63e1": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -1548.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -1504.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -1505.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -884.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 668.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": 606.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 312.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 79.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 95.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 402.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -77.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -77.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -69.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": 2.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": -17.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 6.0}], "data-0369b6ef3b54fb703e8fe2d94d460c7b": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -22.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -22.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -29.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -12.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -2.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -4.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -16.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": 8.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": 9.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 27.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": -5.0}], "data-3ba7fe7e3bdf52e9ac95c17421bfd4cf": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -66.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -66.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -65.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -114.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -16.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -16.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -10.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -19.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": -19.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -21.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -12.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -12.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -17.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 1.0}], "data-c107552ec3064de26d696fea9a3b96c7": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -59.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -59.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -59.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -41.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 9.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": 9.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 11.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 10.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 19.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -3.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -2.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -3.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": -1.0}], "data-99d523f051a7bae61c04889b642d61ce": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -31.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -31.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -21.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -26.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 4.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": 4.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -5.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -5.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": -6.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -5.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": 4.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": 5.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 3.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": -2.0}], "data-1c77be1494529be96aa070f8745c9846": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -135.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -135.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -136.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": 12.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 28.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": 28.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 25.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 157.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 162.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 187.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -6.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -11.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -31.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 32.0}], "data-1f77e872bd00705ff53c2a630b721a43": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": 133.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": 133.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": 132.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": 128.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -17.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -17.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -20.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 107.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 107.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 82.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -42.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -42.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -13.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 53.0}], "data-908717bb8183e35f28b75a2b4661d04b": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -134.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -120.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -24.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -261.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -27.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -42.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -97.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -83.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": -82.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -104.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -1.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -20.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 16.0}], "data-57c5e2191b00698f28ba4a15414cb359": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -6.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -6.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -7.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 2.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": 7.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": 7.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 6.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": null}], "data-fc62cd1b88d6e9082a3699d335016cd1": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": 5.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": 6.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": 10.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": -5.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -5.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": -7.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": -7.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": -6.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": -4.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": -4.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": -2.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": -2.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": null}], "data-f206358a4abaec37a84e10865aec59cd": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -12.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -12.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": 13.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": 141.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": 33.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": 34.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": 60.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 77.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 79.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 34.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": 40.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": 38.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 38.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": 7.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": 6.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 4.0}], "data-36097c90c6d588d7448887df7fa122d7": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": -1.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": 6.0}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 4.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 4.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": 5.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": 5.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": 9.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": 2.0}], "data-d91c45289da8f30681765f0ddf149d23": [{"Retrievability": " TOTAL", "Percentage": "0-10%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "0-10%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "0-10%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "0-10%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "10-20%", "Change": -1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "10-20%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "20-30%", "Change": 1.0}, {"Retrievability": " SEARCHABILITY", "Percentage": "20-30%", "Change": 1.0}, {"Retrievability": " BROWSEABILITY", "Percentage": "20-30%", "Change": 1.0}, {"Retrievability": " CONNECTIVITY", "Percentage": "20-30%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "30-40%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "30-40%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "40-50%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "40-50%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "50-60%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "50-60%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "60-70%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "60-70%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "70-80%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "70-80%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "80-90%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "80-90%", "Change": null}, {"Retrievability": " TOTAL", "Percentage": "90-100%", "Change": null}, {"Retrievability": " SEARCHABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " BROWSEABILITY", "Percentage": "90-100%", "Change": null}, {"Retrievability": " CONNECTIVITY", "Percentage": "90-100%", "Change": null}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./changes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="change-field-retrievabilty-same.html" title="previous page">Retrieval</a>
+    <a class='right-next' id="next-link" href="../latest/field-completeness-departmental.html" title="next page">Completeness (Departmental)</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Richard Palmer<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

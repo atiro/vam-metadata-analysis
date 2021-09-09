@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; V&amp;A Collections Metadata Quality</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/va-red.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">V&A Collections Metadata Quality</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   V&amp;A Metadata Quality Report
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Summary
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-latest.html">
+   Published Objects (Monthly Change)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Change (Monthly)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../overview/published-object-range-change.html">
+   Published Objects (Latest)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-same-monthly-field-completeness-departmental.html">
+   Completeness
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-monthly-field-completeness-departmental.html">
+   Completeness (incl. new/del)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-field-retrievabilty-same.html">
+   Retrieval
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="change-field-retrievabilty.html">
+   Retrieval (incl. new/del)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Latest
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-departmental.html">
+   Completeness (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-completeness-decades.html">
+   Completeness (Decades)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-departmental.html">
+   Retrievability (Departmental)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/field-retrievabilty-decades.html">
+   Retrievability (Decades)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Quantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-material.html">
+   Missing Entities - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-missingentities-techniques.html">
+   Missing Entities - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-material.html">
+   Factcheck - Materials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../latest/rule-factcheck-techniques.html">
+   Factcheck - Techniques
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-singular-plural.html">
+   Singular/Plural Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-upper-lower.html">
+   Upper/Lower Object Types
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problems (Unquantifiable)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-long-short-objecttype.html">
+   Long/Short Unique Object Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problem/problem-high-cardinality.html">
+   High Cardinality
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/changes/type-field-completeness.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchanges/type-field-completeness.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/changes/type-field-completeness.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Field Completeness by Object Type (Top 25)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/home/richard/Git/metadata/vam-metadata/data/*.csv&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d941a58cf21c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/home/richard/Git/metadata/vam-metadata/data/*.csv&#39;</span><span class="p">)))</span>
+
+<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">concat</span><span class="nt">(objs, axis, join, ignore_index, keys, levels, names, verify_integrity, sort, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="ne">ValueError</span><span class="p">:</span> <span class="n">Indexes</span> <span class="n">have</span> <span class="n">overlapping</span> <span class="n">values</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">274</span><span class="s2">     op = _Concatenator(</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span><span class="s2">         objs,</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span><span class="s2">         axis=axis,</span>
+
+<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">__init__</span><span class="nt">(self, objs, axis, join, keys, levels, names, ignore_index, verify_integrity, copy, sort)</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span><span class="s2">         if len(objs) == 0:</span>
+<span class="ne">--&gt; </span><span class="mi">331</span><span class="s2">             raise ValueError(&quot;No objects to concatenate&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span><span class="s2">         if keys is None:</span>
+
+<span class="ne">ValueError</span>: No objects to concatenate
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First create new data frame reducing down to just the columns we need</span>
+
+<span class="n">complete_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;\[objectType|completeness*&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">complete_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>[objectType</th>
+      <th>completeness:TOTAL</th>
+      <th>completeness:COMPOSITION</th>
+      <th>completeness:PRODUCTION</th>
+      <th>completeness:ASSOCIATION</th>
+      <th>completeness:MATERIALITY</th>
+      <th>completeness:MUSEUM</th>
+      <th>completeness:HISTORY</th>
+      <th>completeness:PHYSICALITY</th>
+      <th>completeness:ACADEMIC</th>
+      <th>completeness:DEPICTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>10913</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10914</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10915</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10916</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10917</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1239903 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_25_objects</span> <span class="o">=</span> <span class="n">complete_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">25</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">tidied_df</span> <span class="o">=</span> <span class="n">complete_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;completeness:&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
+<span class="n">tidied_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>[objectType</th>
+      <th>TOTAL</th>
+      <th>COMPOSITION</th>
+      <th>PRODUCTION</th>
+      <th>ASSOCIATION</th>
+      <th>MATERIALITY</th>
+      <th>MUSEUM</th>
+      <th>HISTORY</th>
+      <th>PHYSICALITY</th>
+      <th>ACADEMIC</th>
+      <th>DEPICTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Print</td>
+      <td>0.025641</td>
+      <td>1.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>10913</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10914</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10915</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10916</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>10917</th>
+      <td>Fashion design</td>
+      <td>0.282051</td>
+      <td>1.0</td>
+      <td>0.571429</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1239903 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save all the possible collectioncode</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+
+<span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span><span class="mi">0</span>
+
+<span class="n">dept_col_counts</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">charts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hcharts</span> <span class="o">=</span> <span class="p">[]</span>
+        
+<span class="k">for</span> <span class="n">obj_type</span> <span class="ow">in</span> <span class="n">top_25_objects</span><span class="p">:</span>
+  <span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+  <span class="n">dept_stats_df</span> <span class="o">=</span> <span class="n">tidied_df</span><span class="p">[</span><span class="n">tidied_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">obj_type</span><span class="p">]</span> 
+  <span class="c1"># Now need to loop over each completeness coll in turn</span>
+  <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">dept_stats_df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="c1"># Group into counts of percentages 0-10, 10-20, ... 90-100</span>
+    <span class="c1"># dept_col_counts = dept_stats_df[column].value_counts(bins=10, sort=False)</span>
+    
+    <span class="n">dept_col_counts</span> <span class="o">=</span> <span class="n">dept_stats_df</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">dept_stats_df</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="n">ranges</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0%&quot;</span><span class="p">,</span><span class="s2">&quot;10%&quot;</span><span class="p">,</span><span class="s2">&quot;20%&quot;</span><span class="p">,</span><span class="s2">&quot;30%&quot;</span><span class="p">,</span><span class="s2">&quot;40%&quot;</span><span class="p">,</span><span class="s2">&quot;50%&quot;</span><span class="p">,</span><span class="s2">&quot;60%&quot;</span><span class="p">,</span><span class="s2">&quot;70%&quot;</span><span class="p">,</span><span class="s2">&quot;80%&quot;</span><span class="p">,</span><span class="s2">&quot;90%&quot;</span><span class="p">],</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="n">dept_col_counts</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">column</span>
+    <span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dept_col_counts</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+  <span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Concept&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s1">&#39;Percentages&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span>
+    <span class="c1"># TO handle converting from CategoricalIndex - may change https://github.com/pandas-dev/pandas/issues/19136</span>
+  <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+  <span class="c1">#print(dept_rows_df)</span>
+  <span class="n">dept_rows_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+  <span class="n">dept_rows_melt_df</span> <span class="o">=</span> <span class="n">dept_rows_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Concept&#39;</span><span class="p">])</span>
+
+  <span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">dept_rows_melt_df</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+       <span class="n">x</span><span class="o">=</span><span class="s1">&#39;value:Q&#39;</span><span class="p">,</span>
+       <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Concept:O&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;variable:O&#39;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">220</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">obj_type</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dept_stats_df</span><span class="p">)))</span>
+  <span class="n">charts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chart</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+      <span class="n">hcharts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span><span class="o">*</span><span class="n">charts</span><span class="p">))</span>
+      <span class="n">charts</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">else</span><span class="p">:</span>
+      <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">hcharts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">alt</span><span class="o">.</span><span class="n">hconcat</span><span class="p">(</span><span class="o">*</span><span class="n">charts</span><span class="p">))</span>
+
+<span class="n">big_chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">vconcat</span><span class="p">(</span><span class="o">*</span><span class="n">hcharts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">big_chart</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;type-field.completeness.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">d4dd24cd443a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">big_chart</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;type-field.completeness.png&#39;</span><span class="p">)</span>
+
+<span class="nn">~/.virtualenvs/jupyterlab/lib/python3.8/site-packages/altair/vegalite/v4/api.py</span> in <span class="ni">save</span><span class="nt">(self, fp, format, override_data_transformer, scale_factor, vegalite_version, vega_version, vegaembed_version, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">474</span>         <span class="k">if</span> <span class="n">override_data_transformer</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">475</span>             <span class="k">with</span> <span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">476</span>                 <span class="n">result</span> <span class="o">=</span> <span class="n">save</span><span class="p">(</span><span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">477</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">478</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">save</span><span class="p">(</span><span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">~/.virtualenvs/jupyterlab/lib/python3.8/site-packages/altair/utils/save.py</span> in <span class="ni">save</span><span class="nt">(chart, fp, vega_version, vegaembed_version, format, mode, vegalite_version, embed_options, json_kwds, webdriver, scale_factor, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>         <span class="n">write_file_or_filename</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">mimebundle</span><span class="p">[</span><span class="s2">&quot;text/html&quot;</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="k">elif</span> <span class="nb">format</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;svg&quot;</span><span class="p">]:</span>
+<span class="ne">--&gt; </span><span class="mi">112</span>         <span class="n">mimebundle</span> <span class="o">=</span> <span class="n">spec_to_mimebundle</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>             <span class="n">spec</span><span class="o">=</span><span class="n">spec</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">114</span>             <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span>
+
+<span class="nn">~/.virtualenvs/jupyterlab/lib/python3.8/site-packages/altair/utils/mimebundle.py</span> in <span class="ni">spec_to_mimebundle</span><span class="nt">(spec, format, mode, vega_version, vegaembed_version, vegalite_version, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>                 <span class="s2">&quot;see http://github.com/altair-viz/altair_saver/&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fmt</span><span class="o">=</span><span class="nb">format</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>             <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">60</span>         <span class="k">return</span> <span class="n">altair_saver</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="s2">&quot;html&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">html</span> <span class="o">=</span> <span class="n">spec_to_html</span><span class="p">(</span>
+
+<span class="nn">~/.virtualenvs/jupyterlab/lib/python3.8/site-packages/altair_saver/_core.py</span> in <span class="ni">render</span><span class="nt">(chart, fmts, mode, embed_options, method, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">253</span> 
+<span class="g g-Whitespace">    </span><span class="mi">254</span>     <span class="k">for</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">fmts</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">255</span>         <span class="n">Saver</span> <span class="o">=</span> <span class="n">_select_saver</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="n">fmt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">256</span>         <span class="n">saver</span> <span class="o">=</span> <span class="n">Saver</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span> <span class="n">embed_options</span><span class="o">=</span><span class="n">embed_options</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">257</span>         <span class="n">mimebundle</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">saver</span><span class="o">.</span><span class="n">mimebundle</span><span class="p">(</span><span class="n">fmt</span><span class="p">))</span>
+
+<span class="nn">~/.virtualenvs/jupyterlab/lib/python3.8/site-packages/altair_saver/_core.py</span> in <span class="ni">_select_saver</span><span class="nt">(method, mode, fmt, fp)</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span>             <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">enabled</span><span class="p">()</span> <span class="ow">and</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">valid_formats</span><span class="p">[</span><span class="n">mode</span><span class="p">]:</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span>                 <span class="k">return</span> <span class="n">s</span>
+<span class="ne">---&gt; </span><span class="mi">69</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No enabled saver found that supports format=</span><span class="si">{</span><span class="n">fmt</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unrecognized method: </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: No enabled saver found that supports format=&#39;png&#39;
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./changes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Richard Palmer<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

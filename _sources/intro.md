@@ -1,15 +1,24 @@
 # V&A Metadata Quality Report
 
-This site provides analysis and visualisations of different aspects of the collections data of the museum. Statistics are from the 1st of each month, with 
-change comparisions between this month and the previous month.
+This site provides analysis and visualisations of different aspects of the collections data of the museum. Statistics are calculated from
+data from the 1st day of each month, with comparisions of change in data measured between this month and the previous month.
 
-## Report Types
+## Reports
 
-Reports are split into the following types:
+The following types of analysis and visualisations are available:
+
+  * Completeness - How many fields have values in a records
+  * Retrieval - How many fields related to record discovery have values
+  * Accuracy - Fields containing possible inaccuracies
+  * Consistency - Fields with possible missing information
+  
+ Some additional reports are available for more specific data validations.
 
 ## Concept Grouping
 
-For ease of use, and to make visualisations more manageable, fields in objects records have been grouped together into 9 different concept groups:
+For ease of use, and to make visualisations more manageable, fields in objects 
+records have been grouped together into 9 different concept groups for showing
+completeness:
   
   * Physicality - record fields relating to physical aspects of the object
   * Materiality - fields relating to the material aspects of the object
@@ -25,4 +34,4 @@ For ease of use, and to make visualisations more manageable, fields in objects r
 
 ### 2021
 
-  * Aug
+  * [Aug](https://atiro.github.io/vam-metadata-analysis/archive/2021/Aug/)
