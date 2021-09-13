@@ -98,7 +98,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../overview/published-object-range-latest.html">
-   Published Objects (Latest)
+   Published Object Records
   </a>
  </li>
  <li class="toctree-l1">
@@ -130,7 +130,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../overview/published-object-range-change.html">
-   Published Objects (Monthly Change)
+   Published Object Records
   </a>
  </li>
  <li class="toctree-l1">
@@ -338,32 +338,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d941a58cf21c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/home/richard/Git/metadata/vam-metadata/data/*.csv&#39;</span><span class="p">)))</span>
-
-<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">concat</span><span class="nt">(objs, axis, join, ignore_index, keys, levels, names, verify_integrity, sort, copy)</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>     <span class="ne">ValueError</span><span class="p">:</span> <span class="n">Indexes</span> <span class="n">have</span> <span class="n">overlapping</span> <span class="n">values</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>     <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">274</span><span class="s2">     op = _Concatenator(</span>
-<span class="g g-Whitespace">    </span><span class="mi">275</span><span class="s2">         objs,</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span><span class="s2">         axis=axis,</span>
-
-<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">__init__</span><span class="nt">(self, objs, axis, join, keys, levels, names, ignore_index, verify_integrity, copy, sort)</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span><span class="s2">         if len(objs) == 0:</span>
-<span class="ne">--&gt; </span><span class="mi">331</span><span class="s2">             raise ValueError(&quot;No objects to concatenate&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">332</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">333</span><span class="s2">         if keys is None:</span>
-
-<span class="ne">ValueError</span>: No objects to concatenate
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -393,182 +367,104 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>[objectType</th>
       <th>completeness:TOTAL</th>
-      <th>completeness:COMPOSITION</th>
-      <th>completeness:PRODUCTION</th>
-      <th>completeness:ASSOCIATION</th>
-      <th>completeness:MATERIALITY</th>
-      <th>completeness:MUSEUM</th>
-      <th>completeness:HISTORY</th>
-      <th>completeness:PHYSICALITY</th>
-      <th>completeness:ACADEMIC</th>
-      <th>completeness:DEPICTION</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Print</td>
-      <td>0.025641</td>
-      <td>1.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Print</td>
-      <td>0.025641</td>
-      <td>1.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Print</td>
-      <td>0.025641</td>
-      <td>1.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Print</td>
-      <td>0.025641</td>
-      <td>1.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Print</td>
-      <td>0.025641</td>
-      <td>1.0</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <td>0.75</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>10913</th>
-      <td>Fashion design</td>
-      <td>0.282051</td>
-      <td>1.0</td>
-      <td>0.571429</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <th>9792</th>
+      <td>1.00</td>
     </tr>
     <tr>
-      <th>10914</th>
-      <td>Fashion design</td>
-      <td>0.282051</td>
-      <td>1.0</td>
-      <td>0.571429</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <th>9793</th>
+      <td>1.00</td>
     </tr>
     <tr>
-      <th>10915</th>
-      <td>Fashion design</td>
-      <td>0.282051</td>
-      <td>1.0</td>
-      <td>0.571429</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <th>9794</th>
+      <td>1.00</td>
     </tr>
     <tr>
-      <th>10916</th>
-      <td>Fashion design</td>
-      <td>0.282051</td>
-      <td>1.0</td>
-      <td>0.571429</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <th>9795</th>
+      <td>1.00</td>
     </tr>
     <tr>
-      <th>10917</th>
-      <td>Fashion design</td>
-      <td>0.282051</td>
-      <td>1.0</td>
-      <td>0.571429</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.5</td>
-      <td>0.0</td>
-      <td>0.0</td>
+      <th>9796</th>
+      <td>0.75</td>
     </tr>
   </tbody>
 </table>
-<p>1239903 rows × 11 columns</p>
+<p>40995 rows × 1 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_25_objects</span> <span class="o">=</span> <span class="n">complete_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">25</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2894</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2895</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2896</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;[objectType&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">8</span><span class="n">a2fc8b10aed</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">top_25_objects</span> <span class="o">=</span> <span class="n">complete_df</span><span class="p">[</span><span class="s1">&#39;[objectType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">25</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2904</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2905</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">2906</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2907</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">2908</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">~/.virtualenvs/etcdocs/lib/python3.8/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2895</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2896</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2897</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">2898</span> 
+<span class="g g-Whitespace">   </span><span class="mi">2899</span>         <span class="k">if</span> <span class="n">tolerance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="ne">KeyError</span>: &#39;[objectType&#39;
 </pre></div>
 </div>
 </div>
